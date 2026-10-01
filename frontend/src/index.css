@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap");
+@import "tailwindcss";
+
+/*
+  Gestão Plus CRM — paleta clara (creme + petróleo + laranja), estrutura igual
+  aos módulos do Cliente Plus (menu recolhível, topo com busca, cards).
+*/
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-titulo: "Poppins", "Inter", ui-sans-serif, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  /* conteúdo */
+  --color-fundo: #f6f2ea;
+  --color-fundo-2: #efe9dd;
+  --color-cartao: #ffffff;
+  --color-linha: #e9e2d4;
+  --color-linha-2: #ddd4c3;
+  --color-texto: #16323c;
+  --color-suave: #6b7a80;
+
+  /* menu lateral */
+  --color-menu: #0b3240;
+  --color-menu-2: #0e4252;
+  --color-menu-linha: #1b5364;
+  --color-menu-texto: #cfe3e7;
+
+  /* marca */
+  --color-petroleo: #145f6e;
+  --color-petroleo-claro: #1f7f8f;
+  --color-laranja: #f47b20;
+  --color-laranja-claro: #f9a03f;
+  --color-ambar: #f5a524;
+  --color-vermelho: #e5484d;
+  --color-verde: #16a34a;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-fundo);
+  color: var(--color-texto);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-laranja-gradiente {
+  background-image: linear-gradient(90deg, var(--color-ambar), var(--color-laranja));
+}
+
+.bg-menu-gradiente {
+  background-image: linear-gradient(180deg, var(--color-menu-2) 0%, var(--color-menu) 55%, #082833 100%);
+}
+
+.sombra-cartao {
+  box-shadow: 0 1px 2px rgba(22, 50, 60, 0.04), 0 8px 24px -16px rgba(22, 50, 60, 0.25);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfc5b3 transparent;
+}
+
+.menu-rolagem {
+  scrollbar-color: #24606f transparent;
+}
+
+/* Tutorial guiado: destaque do elemento */
+@keyframes tour-pulso {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(244, 123, 32, 0.55), 0 0 0 9999px rgba(8, 30, 38, 0.55); }
+  50% { box-shadow: 0 0 0 9px rgba(244, 123, 32, 0.25), 0 0 0 9999px rgba(8, 30, 38, 0.55); }
+}
+.tour-destaque {
+  animation: tour-pulso 1.8s ease-in-out infinite;
+}
+@keyframes tour-entrar {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.tour-balao {
+  animation: tour-entrar 0.28s ease-out;
+}
+@keyframes aceno {
+  0%, 60%, 100% { transform: rotate(0); }
+  10%, 30% { transform: rotate(14deg); }
+  20%, 40% { transform: rotate(-8deg); }
+}
+.aceno {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: aceno 2.2s ease-in-out infinite;
+}
+
+@media print {
+  body { background: white; }
+}

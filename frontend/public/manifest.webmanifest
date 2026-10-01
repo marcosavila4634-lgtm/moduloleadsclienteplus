@@ -1,0 +1,16 @@
+{
+  "name": "Gestão Plus CRM",
+  "short_name": "Gestão Plus",
+  "description": "Atendimento, vendas e IA no WhatsApp",
+  "start_url": "/conversas",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f2ea",
+  "theme_color": "#0b3240",
+  "icons": [
+    { "src": "/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icone-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icone.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

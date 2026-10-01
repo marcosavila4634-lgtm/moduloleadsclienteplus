@@ -1,0 +1,11 @@
+node_modules/
+dist/
+backend/target/
+backend/data/
+backend/.env
+backend/.env.*
+frontend/.env.local
+# Cópia dos dados do Meppy: tem dados pessoais de clientes (LGPD). Nunca commitar.
+dados-meppy/
+*.log
+*.tsbuildinfo
