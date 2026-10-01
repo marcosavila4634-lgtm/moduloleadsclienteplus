@@ -1,4 +1,4 @@
-# Gestão Plus CRM — instruções do projeto
+# LeadsPlus — instruções do projeto
 
 Leia o README.md para a visão geral. Regras deste repositório:
 

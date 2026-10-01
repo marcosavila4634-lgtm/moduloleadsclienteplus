@@ -7,7 +7,7 @@
   <groupId>br.com.clienteplus</groupId>
   <artifactId>gestao-plus-crm</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <name>Gestão Plus CRM - backend</name>
+  <name>LeadsPlus - backend</name>
 
   <properties>
     <maven.compiler.release>21</maven.compiler.release>

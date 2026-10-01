@@ -1,4 +1,4 @@
-// Service worker do Gestão Plus CRM: deixa o app instalável e mostra os
+// Service worker do LeadsPlus: deixa o app instalável e mostra os
 // avisos (Web Push) mesmo com o sistema fechado.
 
 self.addEventListener("install", () => self.skipWaiting());
@@ -12,10 +12,10 @@ self.addEventListener("push", (e) => {
   try {
     d = e.data ? e.data.json() : {};
   } catch {
-    d = { titulo: "Gestão Plus CRM", texto: e.data ? e.data.text() : "" };
+    d = { titulo: "LeadsPlus", texto: e.data ? e.data.text() : "" };
   }
   e.waitUntil(
-    self.registration.showNotification(d.titulo || "Gestão Plus CRM", {
+    self.registration.showNotification(d.titulo || "LeadsPlus", {
       body: d.texto || "",
       icon: "/icone-192.png",
       badge: "/icone-192.png",

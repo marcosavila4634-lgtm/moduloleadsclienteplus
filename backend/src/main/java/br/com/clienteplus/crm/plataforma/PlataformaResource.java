@@ -206,7 +206,7 @@ public class PlataformaResource {
   @Path("publico/plataforma")
   public Map<String, Object> publica() {
     Map<String, Object> c = Json.m(db.valor("select config from crm_plataforma where id = 1"));
-    return Json.de("nome", Json.s(c, "nome", "Gestão Plus CRM"), "logo", Json.s(c, "logo"), "cor", Json.s(c, "cor"), "suporte", Json.s(c, "suporte_whatsapp"),
+    return Json.de("nome", Json.s(c, "nome", "LeadsPlus"), "logo", Json.s(c, "logo"), "cor", Json.s(c, "cor"), "suporte", Json.s(c, "suporte_whatsapp"),
         "cadastroAberto", Json.b(c, "cadastro_aberto", true));
   }
 

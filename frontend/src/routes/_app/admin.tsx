@@ -26,7 +26,7 @@ function Admin() {
   if (!admin) return <Card><Vazio icone={Lock} titulo="Área restrita">Só o administrador da plataforma acessa esta área.</Vazio></Card>;
   return (
     <div className="flex flex-col gap-4">
-      <CabecalhoPagina titulo="Admin da plataforma" icone={ShieldCheck} descricao="Empresas clientes, usuários, tutorial e configurações gerais do Gestão Plus CRM." />
+      <CabecalhoPagina titulo="Admin da plataforma" icone={ShieldCheck} descricao="Empresas clientes, usuários, tutorial e configurações gerais do LeadsPlus." />
       <Abas valor={aba} aoMudar={(a) => navegar({ search: { aba: a } })} abas={[
         { valor: "resumo", rotulo: "Resumo" }, { valor: "empresas", rotulo: "Empresas" }, { valor: "usuarios", rotulo: "Usuários" },
         { valor: "tutorial", rotulo: "Tutorial" }, { valor: "config", rotulo: "Configurações" }, { valor: "importar", rotulo: "Importar do Meppy" },
@@ -329,7 +329,7 @@ function ConfigPlataforma() {
     <div className="grid gap-4 lg:grid-cols-2">
       <Card className="flex flex-col gap-3">
         <TituloCard icone={Settings}>Marca e cadastro</TituloCard>
-        <Campo rotulo="Nome do sistema"><Entrada value={f.nome ?? ""} onChange={(e) => setF({ ...f, nome: e.target.value })} placeholder="Gestão Plus CRM" /></Campo>
+        <Campo rotulo="Nome do sistema"><Entrada value={f.nome ?? ""} onChange={(e) => setF({ ...f, nome: e.target.value })} placeholder="LeadsPlus" /></Campo>
         <Campo rotulo="Link do logo (opcional)"><Entrada value={f.logo ?? ""} onChange={(e) => setF({ ...f, logo: e.target.value })} /></Campo>
         <Campo rotulo="WhatsApp do suporte (aparece na ajuda)"><Entrada value={f.suporte_whatsapp ?? ""} onChange={(e) => setF({ ...f, suporte_whatsapp: e.target.value })} placeholder="5511999999999" /></Campo>
         <Interruptor ligado={f.cadastro_aberto !== false} aoMudar={(v) => setF({ ...f, cadastro_aberto: v })} rotulo="Qualquer pessoa pode criar conta" descricao="Desligado: só entra quem for convidado ou criado aqui no Admin." />

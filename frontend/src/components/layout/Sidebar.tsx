@@ -15,7 +15,7 @@ export function Logo({ compacto }: { compacto?: boolean }) {
       {!compacto && (
         <div className="leading-none">
           <div className="font-titulo text-[19px] font-extrabold tracking-tight text-white">
-            GESTÃO <span className="text-laranja-claro">PLUS</span>
+            LEADS <span className="text-laranja-claro">PLUS</span>
           </div>
           <div className="mt-1 text-[10.5px] font-semibold tracking-[0.32em] text-menu-texto">CRM & VENDAS</div>
           <div className="mt-1 text-[8.5px] font-medium tracking-wide text-menu-texto/70">CONVERSAS QUE VIRAM CLIENTES</div>

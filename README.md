@@ -1,4 +1,4 @@
-# Gestão Plus CRM
+# LeadsPlus
 
 CRM com IA para pequenos negócios, feito para virar um módulo do **Cliente Plus**:
 atendimento WhatsApp/Instagram em uma caixa só, robôs de venda com Claude, funil

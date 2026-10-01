@@ -116,7 +116,7 @@ public class ConfiguracoesResource {
   @Path("/testar-email")
   public Map<String, Object> testarEmail(Map<String, Object> corpo) {
     sessao.exigir("admin");
-    email.enviar(sessao.loja(), Json.s(corpo, "para", sessao.email()), "Teste do Gestão Plus CRM", "<p>Se você recebeu este e-mail, o envio está funcionando. ✅</p>");
+    email.enviar(sessao.loja(), Json.s(corpo, "para", sessao.email()), "Teste do LeadsPlus", "<p>Se você recebeu este e-mail, o envio está funcionando. ✅</p>");
     return Map.of("ok", true);
   }
 

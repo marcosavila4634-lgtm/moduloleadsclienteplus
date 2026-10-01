@@ -1,6 +1,6 @@
 {
-  "name": "Gestão Plus CRM",
-  "short_name": "Gestão Plus",
+  "name": "LeadsPlus",
+  "short_name": "LeadsPlus",
   "description": "Atendimento, vendas e IA no WhatsApp",
   "start_url": "/conversas",
   "scope": "/",

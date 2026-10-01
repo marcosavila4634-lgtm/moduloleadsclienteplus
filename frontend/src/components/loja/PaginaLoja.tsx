@@ -122,7 +122,7 @@ export function PaginaLoja({ pagina, vitrine, aoAbrirProduto, aoClicarSecao, sel
                     </a>
                   )}
                 </div>
-                <div className="mt-8 text-center text-[11.5px] opacity-60">Loja feita com Gestão Plus CRM</div>
+                <div className="mt-8 text-center text-[11.5px] opacity-60">Loja feita com LeadsPlus</div>
               </footer>
             ));
           default:

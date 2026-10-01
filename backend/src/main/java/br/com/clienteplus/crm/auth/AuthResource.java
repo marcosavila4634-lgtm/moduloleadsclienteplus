@@ -50,7 +50,7 @@ public class AuthResource {
       String token = Cripto.tokenAleatorio(32);
       db.executa("update crm_usuarios set reset_token_hash = ?, reset_expira = now() + interval '1' hour where id = ?::uuid", Cripto.sha256(token), u.get("id"));
       String link = urlPublica.replaceAll("/+$", "") + "/redefinir/" + token;
-      String html = "<p>Olá, " + Formatos.html(Json.s(u, "nome", "")) + "!</p><p>Recebemos um pedido para trocar a sua senha do Gestão Plus CRM.</p>"
+      String html = "<p>Olá, " + Formatos.html(Json.s(u, "nome", "")) + "!</p><p>Recebemos um pedido para trocar a sua senha do LeadsPlus.</p>"
           + "<p><a href=\"" + link + "\" style=\"background:#f47b20;color:#fff;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:bold\">Criar nova senha</a></p>"
           + "<p style=\"color:#777\">O link vale 1 hora. Se não foi você, ignore este e-mail — sua senha continua a mesma.</p>";
       try {
@@ -179,7 +179,7 @@ public class AuthResource {
     confirmarSenha(id, Json.s(corpo, "senha"));
     String segredo = Totp.novoSegredo();
     db.executa("update crm_usuarios set totp_segredo = ?, totp_ativo = false where id = ?", cripto.cifrar(segredo), id);
-    return Map.of("segredo", segredo, "uri", Totp.uri(segredo, sessao.email(), "Gestão Plus CRM"));
+    return Map.of("segredo", segredo, "uri", Totp.uri(segredo, sessao.email(), "LeadsPlus"));
   }
 
   /** Passo 2: confirma com um código do app e liga. */
